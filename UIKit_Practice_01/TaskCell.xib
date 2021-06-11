@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskCell" customModule="UIKit_Practice_01" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="xJe-lG-Z6z" id="4jQ-t5-6Yp"/>
+                <outlet property="titleLabel" destination="Oud-Zy-9ET" id="1w3-Gf-eXi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="4QC-pe-hQh">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4QC-pe-hQh" id="Kvo-8y-pmr">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWa-ai-kOG">
+                        <rect key="frame" x="20" y="28" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="4ZP-Mt-H0N"/>
+                            <constraint firstAttribute="width" constant="44" id="8v1-Ps-g6o"/>
+                        </constraints>
+                        <state key="normal" image="circle" catalog="system"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-Zy-9ET">
+                        <rect key="frame" x="72" y="28" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-lG-Z6z">
+                        <rect key="frame" x="72" y="55" width="30.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LWa-ai-kOG" firstAttribute="leading" secondItem="Kvo-8y-pmr" secondAttribute="leading" constant="20" symbolic="YES" id="5jx-Bs-3gA"/>
+                    <constraint firstItem="Oud-Zy-9ET" firstAttribute="leading" secondItem="LWa-ai-kOG" secondAttribute="trailing" constant="8" symbolic="YES" id="Kms-9g-Xed"/>
+                    <constraint firstItem="xJe-lG-Z6z" firstAttribute="leading" secondItem="LWa-ai-kOG" secondAttribute="trailing" constant="8" symbolic="YES" id="Lx4-1H-qNi"/>
+                    <constraint firstItem="LWa-ai-kOG" firstAttribute="centerY" secondItem="Kvo-8y-pmr" secondAttribute="centerY" id="S4v-GE-Vgf"/>
+                    <constraint firstItem="xJe-lG-Z6z" firstAttribute="bottom" secondItem="LWa-ai-kOG" secondAttribute="bottom" id="hUV-Aw-FaP"/>
+                    <constraint firstItem="Oud-Zy-9ET" firstAttribute="top" secondItem="LWa-ai-kOG" secondAttribute="top" id="hiZ-Xo-KdP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="873.91304347826099" y="10.714285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
