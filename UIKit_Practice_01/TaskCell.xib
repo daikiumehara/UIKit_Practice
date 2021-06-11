@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskCell" customModule="UIKit_Practice_01" customModuleProvider="target">
             <connections>
                 <outlet property="dateLabel" destination="xJe-lG-Z6z" id="4jQ-t5-6Yp"/>
+                <outlet property="doneButton" destination="LWa-ai-kOG" id="DSZ-ST-Iij"/>
                 <outlet property="titleLabel" destination="Oud-Zy-9ET" id="1w3-Gf-eXi"/>
             </connections>
         </placeholder>
@@ -26,16 +27,24 @@
                             <constraint firstAttribute="height" constant="44" id="4ZP-Mt-H0N"/>
                             <constraint firstAttribute="width" constant="44" id="8v1-Ps-g6o"/>
                         </constraints>
-                        <state key="normal" image="circle" catalog="system"/>
+                        <state key="normal" image="circle" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="didTapDoneButton:" destination="-1" eventType="touchUpInside" id="QSI-ze-hIw"/>
+                        </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-Zy-9ET">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-Zy-9ET">
                         <rect key="frame" x="72" y="28" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Oud-Zy-9ET" secondAttribute="height" multiplier="2:1" id="OqR-Dh-kIu"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-lG-Z6z">
-                        <rect key="frame" x="72" y="55" width="30.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-lG-Z6z">
+                        <rect key="frame" x="72" y="54" width="30.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
