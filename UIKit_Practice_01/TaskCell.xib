@@ -28,13 +28,13 @@
                         </constraints>
                         <state key="normal" image="circle" catalog="system"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-Zy-9ET">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-Zy-9ET">
                         <rect key="frame" x="72" y="28" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-lG-Z6z">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-lG-Z6z">
                         <rect key="frame" x="72" y="55" width="30.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
@@ -46,8 +46,9 @@
                     <constraint firstItem="Oud-Zy-9ET" firstAttribute="leading" secondItem="LWa-ai-kOG" secondAttribute="trailing" constant="8" symbolic="YES" id="Kms-9g-Xed"/>
                     <constraint firstItem="xJe-lG-Z6z" firstAttribute="leading" secondItem="LWa-ai-kOG" secondAttribute="trailing" constant="8" symbolic="YES" id="Lx4-1H-qNi"/>
                     <constraint firstItem="LWa-ai-kOG" firstAttribute="centerY" secondItem="Kvo-8y-pmr" secondAttribute="centerY" id="S4v-GE-Vgf"/>
-                    <constraint firstItem="xJe-lG-Z6z" firstAttribute="bottom" secondItem="LWa-ai-kOG" secondAttribute="bottom" id="hUV-Aw-FaP"/>
+                    <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="xJe-lG-Z6z" secondAttribute="bottom" constant="17" id="h3k-Vi-7hf"/>
                     <constraint firstItem="Oud-Zy-9ET" firstAttribute="top" secondItem="LWa-ai-kOG" secondAttribute="top" id="hiZ-Xo-KdP"/>
+                    <constraint firstItem="xJe-lG-Z6z" firstAttribute="top" secondItem="Oud-Zy-9ET" secondAttribute="bottom" constant="5" id="iTd-uC-NqS"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="873.91304347826099" y="10.714285714285714"/>
