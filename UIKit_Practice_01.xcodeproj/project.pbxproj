@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A61E895026764B7B006B8534 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61E894E26764B7B006B8534 /* TaskDetailViewController.swift */; };
+		A647ECCB267655CC00BEEA47 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A647ECCA267655CC00BEEA47 /* Detail.storyboard */; };
 		A6866D2C2673AB0800632A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6866D2B2673AB0800632A0F /* AppDelegate.swift */; };
 		A6866D2E2673AB0800632A0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6866D2D2673AB0800632A0F /* SceneDelegate.swift */; };
 		A6866D302673AB0800632A0F /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6866D2F2673AB0800632A0F /* ReminderListViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		A61E894E26764B7B006B8534 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		A647ECCA267655CC00BEEA47 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		A6866D282673AB0800632A0F /* UIKit_Practice_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKit_Practice_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6866D2B2673AB0800632A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6866D2D2673AB0800632A0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				A6866D2D2673AB0800632A0F /* SceneDelegate.swift */,
 				A6866D2F2673AB0800632A0F /* ReminderListViewController.swift */,
 				A61E894E26764B7B006B8534 /* TaskDetailViewController.swift */,
+				A647ECCA267655CC00BEEA47 /* Detail.storyboard */,
 				A6866D312673AB0800632A0F /* Main.storyboard */,
 				A6866D342673AB0E00632A0F /* Assets.xcassets */,
 				A6866D362673AB0E00632A0F /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				A6866D6426745B5200632A0F /* TaskCell.xib in Resources */,
 				A6866D382673AB0E00632A0F /* LaunchScreen.storyboard in Resources */,
 				A6866D352673AB0E00632A0F /* Assets.xcassets in Resources */,
+				A647ECCB267655CC00BEEA47 /* Detail.storyboard in Resources */,
 				A6866D332673AB0800632A0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

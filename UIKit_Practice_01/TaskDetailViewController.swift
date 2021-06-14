@@ -37,12 +37,21 @@ class TaskDetailViewController: UIViewController {
             }
         }
     }
-    var reminder: Reminder?
+    @IBOutlet var tableView: UITableView!
 
-    func configure(with reminder: Reminder) {
-        self.reminder = reminder
+    private var reminder: Reminder?
+    static func instantiate(with reminder: Reminder) -> TaskDetailViewController {
+        let detailVC = UIStoryboard(name: "Detail", bundle: nil)
+            .instantiateInitialViewController() as! TaskDetailViewController
+        detailVC.reminder = reminder
+        return detailVC
     }
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
 }
 
 extension TaskDetailViewController: UITableViewDelegate {
@@ -55,7 +64,7 @@ extension TaskDetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier, for: indexPath) as! TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
         let row = TaskRow(rawValue: indexPath.row)
         cell.textLabel?.text = row?.displayText(for: reminder)
         cell.imageView?.image = row?.cellImage

@@ -19,7 +19,10 @@ class ReminderListViewController: UIViewController {
 }
 
 extension ReminderListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = TaskDetailViewController.instantiate(with: Reminder.testData[indexPath.row])
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
 
 extension ReminderListViewController: UITableViewDataSource {
