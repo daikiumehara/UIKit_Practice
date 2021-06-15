@@ -13,6 +13,7 @@ class TaskCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
 
+    private lazy var dateFormatter = RelativeDateTimeFormatter()
     private var doneButtonAction: DoneButtonAction?
 
     static var identifier: String { String(describing: self) }
@@ -26,10 +27,9 @@ class TaskCell: UITableViewCell {
 extension TaskCell {
     func setup(task: Reminder, buttonAction: @escaping DoneButtonAction) {
         titleLabel.text = task.title
-        dateLabel.text = task.dueDate.description
+        dateLabel.text = dateFormatter.localizedString(for: task.dueDate, relativeTo: Date())
         doneButton.setBackgroundImage(task.isComplete ? UIImage(systemName: "circle.fill") : UIImage(systemName: "circle"),
                                       for: .normal)
         doneButtonAction = buttonAction
     }
-    
 }

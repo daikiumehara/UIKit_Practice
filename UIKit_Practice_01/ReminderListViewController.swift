@@ -9,11 +9,12 @@ import UIKit
 
 class ReminderListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    private lazy var dateFormatter = RelativeDateTimeFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = ReminderListDataSource()
         tableView.register(TaskCell.nib, forCellReuseIdentifier: TaskCell.identifier)
     }
 }
@@ -22,28 +23,6 @@ extension ReminderListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = TaskDetailViewController.instantiate(with: Reminder.testData[indexPath.row])
         self.navigationController?.pushViewController(nextVC, animated: true)
-    }
-}
-
-extension ReminderListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Reminder.testData.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier, for: indexPath) as! TaskCell
-        let task = Reminder.testData[indexPath.row]
-        cell.setup(task: task) { [weak self] in
-            guard let self = self else { return }
-            Reminder.testData[indexPath.row].isComplete.toggle()
-            self.tableView.reloadData()
-        }
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        100.0
     }
 }
 
