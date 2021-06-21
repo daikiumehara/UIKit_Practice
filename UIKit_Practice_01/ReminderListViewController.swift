@@ -10,11 +10,15 @@ import UIKit
 class ReminderListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     private lazy var dateFormatter = RelativeDateTimeFormatter()
+    private var delegate: ReminderListDelegate?
+    private var dataSource: ReminderListDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = ReminderListDataSource()
+        delegate = ReminderListDelegate(self)
+        tableView.delegate = delegate
+        dataSource = ReminderListDataSource()
+        tableView.dataSource = dataSource
         tableView.register(TaskCell.nib, forCellReuseIdentifier: TaskCell.identifier)
     }
 }

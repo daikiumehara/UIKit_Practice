@@ -9,9 +9,9 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
-    private var taskDetailDataSource: TaskDetailDataSource?
+    private var dataSource: TaskDetailDataSource?
     private var reminder: Reminder?
-    
+
     static func instantiate(with reminder: Reminder) -> TaskDetailViewController {
         let detailVC = UIStoryboard(name: "Detail", bundle: nil)
             .instantiateInitialViewController() as! TaskDetailViewController
@@ -21,12 +21,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        taskDetailDataSource = TaskDetailDataSource()
-        tableView.dataSource = taskDetailDataSource
+        dataSource = TaskDetailDataSource(reminder: reminder!)
+        tableView.dataSource = dataSource
     }
-}
-
-extension TaskDetailViewController: UITableViewDelegate {
-
 }
